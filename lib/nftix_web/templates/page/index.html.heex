@@ -1,7 +1,277 @@
 
+
+<div class="dark:bg-gray-900">
+    <div class="2xl:container 2xl:mx-auto md:py-5 lg:px-20 md:px-6 p-4">
+        <div class="flex items-center justify-between">
+            <div class="lg:w-3/12">
+                <div class="w-52 hidden lg:flex items-center space-x-3 border-b border-gray-200 pb-2">
+                    <div class="w-5">
+                        <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1.svg" alt="Search">
+                        <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1dark.svg" alt="Search">
+                    </div>
+                    <input type="text" placeholder="Search for items" class="bg-transparent text-sm text-gray-600 focus:outline-none" />
+                </div>
+                <button onclick="openMenu()" aria-label="Open Menu" class="text-gray-800 dark:text-white hidden md:block lg:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded">
+                    <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg2.svg" alt="toggler">
+                    <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg2dark.svg" alt="toggler">
+                </button>
+                <button onclick="openSearchMenu()" aria-label="Search Menu" class="text-gray-800 dark:text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                    <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1.svg" alt="Search">
+                        <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1dark.svg" alt="Search">
+                </button>
+            </div>
+            <div class="lg:w-6/12 flex flex-col justify-center items-center space-y-3.5">
+                <div aria-label="Nftix. Logo" role="img" class="cursor-pointer text-xl font-bold">
+                    Nftix
+                </div>
+                <div class="hidden lg:block">
+                    <ul class="flex items-center space-x-10">
+                        <li>
+                            <a href="javascript:void(0)" class="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Home</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Catalog</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Bids</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">How it Works</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" class="dark:text-white dark:hover:text-gray-300 text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lg:w-3/12 flex justify-end items-center space-x-4">
+                <a aria-label="view favourites" class="hidden md:block focus:outline-none text-gray-800 dark:text-white focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5" href="javascript:void(0)">
+                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4.svg" alt="favourites">
+                    <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4dark.svg" alt="favourites">
+                </a>
+                <a aria-label="Shopping bag" class="hidden md:block focus:outline-none text-gray-800 dark:text-white focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5" href="javascript:void(0)">
+                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5.svg" alt="bag">
+                    <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5dark.svg" alt="bag">
+                </a>
+                <button onclick="openSmMenu()" aria-label="open menu" class="text-gray-800 dark:text-white md:hidden focus:outline-none focus:ring-2 focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                    <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg2.svg" alt="toggler">
+                    <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg2dark.svg" alt="toggler">
+                </button>
+            </div>
+        </div>
+
+        <div id="md-menu" class="hidden lg:hidden absolute z-10 inset-0 h-screen w-full dark:bg-gray-800 bg-gray-800 bg-opacity-70 dark:bg-opacity-70">
+            <div class="relative w-full h-screen">
+                <div class="absolute inset-0 w-1/2 bg-white dark:bg-gray-900 p-6 justify-center">
+                    <div class="flex items-center justify-between border-b pb-4 border-gray-200 dark:border-gray-700">
+                        <div class="flex items-center space-x-3 mx-2">
+                            <div>
+                                <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1.svg" alt="Search">
+                                <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1dark.svg" alt="Search">
+                            </div>
+                            <input type="text" placeholder="Search for items" class="text-sm text-gray-600 dark:text-gray-300 focus:outline-none bg-transparent" />
+                        </div>
+                        <button onclick="closeMenu()" aria-label="close menu" class="focus:outline-none focus:ring-2 focus:ring-gray-800">
+                            <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6.svg" alt="close">
+                            <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6dark.svg" alt="close">
+                        </button>
+                    </div>
+                    <div class="mt-8">
+                        <ul class="flex flex-col space-y-8">
+                            <li class="flex items-center justify-between">
+                                <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Home</a>
+                                <button class="fill-stroke text-black dark:text-white" aria-label="show options" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
+                                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                                </button>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Catalog</a>
+                                <button class="fill-stroke text-black dark:text-white" aria-label="show options" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
+                                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                                </button>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Pages</a>
+                                <button class="fill-stroke text-black dark:text-white" aria-label="show options" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
+                                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                                </button>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Blog</a>
+                                <button class="fill-stroke text-black dark:text-white" aria-label="show options" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
+                                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                                </button>
+                            </li>
+                            <li class="flex items-center justify-between">
+                                <a href="javascript:void(0)" class="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Contact us</a>
+                                <button class="fill-stroke text-black dark:text-white" aria-label="show options" class="focus:outline-none focus:ring-2 focus:ring-gray-800 hover:bg-gray-100">
+                                    <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search menu -->
+        <div id="mobile-search-menu" class="hidden md:hidden absolute inset-0 z-10 flex flex-col w-full h-screen bg-white dark:bg-gray-900 pt-4">
+            <div class="w-full">
+                <div class="flex items-center justify-between border-b border-gray-200 pb-3 mx-4">
+                    <div class="flex items-center space-x-3 mx-2">
+                        <div>
+                            <img class="w-5 dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1.svg" alt="Search">
+                            <img class="w-5 dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg1dark.svg" alt="Search">
+                        </div>
+                        <input type="text" placeholder="Search for items" class="text-sm text-gray-600 focus:outline-none bg-transparent" />
+                    </div>
+
+                    <button aria-label="close menu" onclick="closeSearchMenu()" class="text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                        <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6.svg" alt="close">
+                        <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6dark.svg" alt="close">
+                    </button>
+                </div>
+            </div>
+            <div class="mt-8 mx-4">
+                <h2 class="text-sm text-gray-600 dark:text-gray-300 uppercase">Suggestions</h2>
+                <ul class="mt-6 flex flex-col space-y-6">
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Bags</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Shoes</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Capes</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Coats</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Denim 2021</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Leather shoe collection 2021</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Active wear</a>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-sm text-gray-600 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline">Sweat suits</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full h-full flex items-end">
+                <ul class="bg-gray-50 dark:bg-gray-800 py-10 px-4 flex flex-col space-y-8 w-full">
+                    <li>
+                        <a class="flex items-center space-x-2 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" href="javascript:void(0)">
+                            <div>
+                                <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5.svg" alt="bag">
+                    <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5dark.svg" alt="bag">
+                            </div>
+                            <p class="text-base">Cart</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center space-x-2 text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" href="javascript:void(0)">
+                            <div>
+                                <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4.svg" alt="favourites">
+                                <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4dark.svg" alt="favourites">
+                            </div>
+                            <p class="text-base">Wishlist</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Main Menu -->
+
+        <div id="mobile-menu" class="hidden md:hidden absolute inset-0 z-10 flex flex-col w-full h-screen bg-white pt-4">
+            <div class="w-full">
+                <div class="flex items-center justify-between border-b border-gray-200 pb-4 mx-4">
+                    <div></div>
+                    <div><p class="text-base font-semibold text-gray-800">Menu</p></div>
+                    <button aria-label="close menu" onclick="closeSmMenu()" class="text-gray-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-gray-800">
+                        <img class="dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6.svg" alt="close">
+                        <img class="dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg6dark.svg" alt="close">
+                    </button>
+                </div>
+            </div>
+            <div class="mt-6 mx-4">
+                <ul class="flex flex-col space-y-8">
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">Home</a>
+                        <button class="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                            <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                        </button>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">Catalog</a>
+                        <button class="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                            <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                        </button>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">Pages</a>
+                        <button class="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                            <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                        </button>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">Blog</a>
+                        <button class="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                            <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                            <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                        </button>
+                    </li>
+                    <li class="flex items-center justify-between">
+                        <a href="javascript:void(0)" class="text-base text-gray-800 focus:outline-none dark:text-white focus:ring-2 focus:ring-gray-800 hover:underline">Contact us</a>
+                        <button class="focus:outline-none focus:ring-2 text-black dark:text-white focus:ring-gray-800 rounded hover:bg-gray-100 p-0.5">
+                            <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7.svg" alt="arrow">
+                                        <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg7dark.svg" alt="arrow">
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="w-full h-full flex items-end">
+                <ul class="bg-gray-50 dark:bg-gray-800 py-10 px-4 flex flex-col space-y-8 w-full">
+                    <li>
+                        <a class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" href="javascript:void(0)">
+                            <div>
+                                <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5.svg" alt="bag">
+                                <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg5dark.svg" alt="bag">
+                            </div>
+                            <p class="text-base text-gray-800">Cart</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="flex items-center space-x-2 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline" href="javascript:void(0)">
+                            <div>
+                                <img class=" dark:hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4.svg" alt="favourites">
+                                <img class=" dark:block hidden" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/navigation-VI-svg4dark.svg" alt="favourites">
+                            </div>
+                            <p class="text-base text-gray-800">Wishlist</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <section>
     <div class="w-full relative pb-10 px-6 xl:px-0">
-        <img class="absolute w-full inset-0 dark:hidden h-full object-cover object-center" src="https://cdn.tuk.dev/assets/templates/weCare/hero2-bg.png" alt="we care family"/>
+
         <nav class="lg:hidden relative z-40">
             <div class="flex py-6 justify-between items-center px-4">
                 <div>
@@ -39,153 +309,121 @@
                 </div>
             </div>
         </nav>
-        <div class="pt-32 lg:flex items-center relative z-10 container mx-auto">
+        <div class="py-20  w-full lg:flex relative z-10 items-center">
             <div class="w-full lg:w-1/2 h-full lg:pr-10 xl:pr-0">
-            <img src={ Routes.static_path(@conn, "/images/creditcard.svg")}  tabindex="0" role="img" aria-label="people smiling" class="mx-auto"   alt="people smiling"/>
+            <img src={ Routes.static_path(@conn, "/images/nftixlanding.svg")}  tabindex="0" role="img" aria-label="people smiling" class="mx-auto pr-32"   alt="people smiling"/>
 
             </div>
             <div  role="contentinfo"  class="w-full lg:w-1/2 h-full">
-                <h1 tabindex="0" class="text-indigo-700 text-4xl lg:text-8xl font-black mb-8">
+                <h1 tabindex="0" class="text-slate-300 text-4xl lg:text-8xl font-black mb-8">
                 Nftix
                 </h1>
-                <p tabindex="0" class="text-gray-800 dark:text-white font-regular mb-8">COMBINING SCIENCE WITH BEAUTY. L'Oreal Paris offerincare products is developed and rigorously tested with leading scientists. Indulge yourself in a luxurious and sensorial skincare experience. Cutting-edge innovations, proven by Science.</p>
-                <div class="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-center shadow-lg rounded-lg">
-                    <div class="sm:flex items-center py-2">
-                        <div class="flex items-center">
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/right_aligned_with_searchbar_Svg4.svg" alt="icon" />
-                            <input aria-label="Doctor name" class="w-24 xl:w-32 leading-none tracking-normal text-gray-800 dark:text-white ml-2.5 placeholder-black" placeholder="Doctor Name" />
+                <h1 tabindex="0" class="text-slate-600 text-2xl lg:text-6xl font-bold mb-8">
+                Marketplace for NFTs collectibles
+                </h1>
+                <p tabindex="0" class="text-gray-800 dark:text-white font-regular">
+                     <div class="bg-white shadow-md border-gray-100 border-2 rounded-lg px-3 py-2 mb-4 mr-32">
+                    <div class="flex items-center  rounded-md">
+                        <div class="pl-2">
+                            <svg class="fill-current text-gray-500 w-6 h-6" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <path class="heroicon-ui"
+                                    d="M16.32 14.9l5.39 5.4a1 1 0 0 1-1.42 1.4l-5.38-5.38a8 8 0 1 1 1.41-1.41zM10 16a6 6 0 1 0 0-12 6 6 0 0 0 0 12z" />
+                            </svg>
                         </div>
-                        <div class="flex items-center sm:mx-4 xl:mx-14 my-6 lg:my-0">
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/right_aligned_with_searchbar_Svg5.svg" alt="icon" />
-                            <input aria-label="zip code" class="w-24 xl:w-32 leading-none tracking-normal text-gray-800 dark:text-white ml-2.5 placeholder-black" placeholder="Zip code" />
+                        <input
+                            class="w-full rounded-md  text-gray-700 leading-tight focus:outline-none py-2 px-2"
+                            id="search" type="text" placeholder="Search teams or members">
+                    </div>
+                    <div class="py-3 text-sm hidden">
+                        <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
+                            <div class="flex-grow font-medium px-2">Tighten Co.</div>
+                            <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
                         </div>
-                        <div class="flex items-center">
-                            <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/right_aligned_with_searchbar_Svg6.svg" alt="icon" />
-                            <input aria-label="insurance" class="w-24 xl:w-32 leading-none tracking-normal text-gray-800 dark:text-white ml-2.5 placeholder-black" placeholder="Insurance" />
+                        <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+                            <div class="flex-grow font-medium px-2">Taylor Otwell</div>
+                            <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
+                        </div>
+                        <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
+                            <div class="flex-grow font-medium px-2">Adam Wathan</div>
+                            <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
+                        </div>
+                        <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                            <span class="bg-gray-400 h-2 w-2 m-2 rounded-full"></span>
+                            <div class="flex-grow font-medium px-2">Duke Street Studio Inc.</div>
+                            <div class="text-sm font-normal text-gray-500 tracking-wide">Team</div>
+                        </div>
+                        <div class="flex justify-start cursor-pointer text-gray-700 hover:text-blue-400 hover:bg-blue-100 rounded-md px-2 py-2 my-2">
+                            <span class="bg-green-400 h-2 w-2 m-2 rounded-full"></span>
+                            <div class="flex-grow font-medium px-2">Jeffrey Wey</div>
+                            <div class="text-sm font-normal text-gray-500 tracking-wide">Member</div>
                         </div>
                     </div>
-                    <button role="button" aria-label="search" class="focus:bg-indigo-700 focus:ring-indigo-700 focus:ring-2 focus:ring-offset-2 text-white bg-indigo-600 hover:bg-indigo-700 mt-4 sm:mt-0 p-3 lg:-ml-8 rounded w-full sm:w-auto relative">
-                        <img class="absolute right-0 mr-2 sm:mr-auto sm:relative icon icon-tabler icon-tabler-search cursor-pointer" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/right_aligned_with_searchbar_Svg7.svg" alt="search" />
-                        <input aria-label="search" class="sm:hidden border-b border-gray-300 w-full bg-transparent pr-6" />
-                    </button>
+   <!-- Code block for button with indigo outline starts -->
+
                 </div>
+                </p>
+                <p tabindex="0" class="mt-10 text-gray-800 dark:text-white font-regular">
+                      <button class="mr-2 my-2 bg-white transition duration-150 ease-in-out hover:bg-gray-100 hover:text-indigo-600 rounded border border-indigo-700 text-indigo-700 px-6 py-2 text-3xl focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-700">Login</button>
+                    <!-- Code block for button with indigo outline ends -->
+
+                    <!-- Code block for primary button starts -->
+                    <button class="mr-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 text-3xl focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-indigo-600">Sign up</button>
+                    <!-- Code block for primary button ends -->
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<footer class='bg-white dark:bg-gray-900'>
 
-  <div class="relative flex justify-start md:justify-center md:items-end ">
-      <img class="absolute dark:hidden object-cover top-10 h-full w-full xl:mt-10 z-0" src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_background.png" alt="background">
-      <div class="flex pt-36 md:pt-32 lg:pt-40 xl:pt-[30rem]   px-4 md:px-6  xl:px-20 flex-col justify-start items-start md:justify-center md:items-center relative z-10">
-          <div class="flex  flex-col items-start justify-start xl:justify-center xl:space-x-8 xl:flex-row">
-              <div class="flex justify-start items-center space-x-4">
-                  <div class="cursor-pointer w-12">
-                      <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/footer_5_marketing_svg1.svg" alt="logo">
-                  </div>
-                  <p class="w-60 text-xl xl:text-2xl font-semibold leading-normal text-white">The North</p>
-              </div>
-              <div class="mt-12 xl:mt-0 grid grid-cols-1 sm:grid-cols-3 gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8">
-                  <div class="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
-                      <h2 class="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Community</h2>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          About Us
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Guidelines and how to
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Quote from the best
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          How to start a blog
-                      </button>
-                  </div>
-
-                  <div class="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
-                      <h2 class="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Getting Started</h2>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          About Us
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Guidelines and how to
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Quote from the best
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          How to start a blog
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Quote from the best
-                      </button>
-                      <button class="text-left text-base hover:text-gray-400 leading-none text-gray-100">
-                          Guidelines and how to
-                      </button>
-                  </div>
-
-                  <div class=" xl:w-72 flex justify-start items-start flex-col space-y-6">
-                      <h2 class="text-base xl:text-xl font-bold xl:font-semibold leading-4 xl:leading-5 text-white">Resources</h2>
-                      <button class="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                          Accessibility
-                      </button>
-                      <button class="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                          Usability
-                      </button>
-                      <button class="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                          Marketplace
-                      </button>
-                      <button class="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                          Design & Dev
-                      </button>
-                      <button class="text-base text-left hover:text-gray-400 leading-none text-gray-100">
-                          Marketplace
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <div class="mt-12 flex  xl:justify-between xl:flex-row flex-col-reverse items-center xl:items-start w-full ">
-              <p class="mt-10 md:mt-12 xl:mt-0 text-sm leading-none text-white" >2020 The Good Company. All Rights Reserved</p>
-              <div class="mt-10 md:mt-12 xl:mt-0 md:flex-row flex-col flex md:justify-center w-full md:w-auto justify-start items-start space-y-4 md:space-y-0 md:items-center md:space-x-4 xl:space-x-6">
-                  <button class="text-base leading-none text-white hover:text-gray-300">
-                      Terms of service
-                  </button>
-                  <button class="text-base leading-none text-white hover:text-gray-300">
-                      Privacy Policy
-                  </button>
-                  <button class="text-base leading-none text-white hover:text-gray-300">
-                      Security
-                  </button>
-                  <button class="text-base leading-none text-white hover:text-gray-300">
-                      Sitemap
-                  </button>
-              </div>
-              <div class="flex  justify-start md:justify-end items-start  w-full md:w-auto md:items-center space-x-6 ">
-                  <button class="text-white hover:text-gray-200 w-6">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M23.25 5.13282C22.406 5.49955 21.513 5.74116 20.5992 5.85001C21.5595 5.28769 22.2817 4.39434 22.6303 3.33751C21.7224 3.86841 20.7307 4.24092 19.6978 4.43907C19.2629 3.98322 18.7397 3.62059 18.1603 3.3732C17.5808 3.12581 16.9571 2.99884 16.327 3.00001C13.7761 3.00001 11.7117 5.03438 11.7117 7.5422C11.7099 7.89102 11.7499 8.23881 11.8308 8.57813C10.0016 8.49238 8.2104 8.02575 6.57187 7.2081C4.93333 6.39044 3.48351 5.23977 2.31516 3.8297C1.90527 4.52069 1.6885 5.30909 1.6875 6.11251C1.6875 7.68751 2.50922 9.0797 3.75 9.89532C3.01487 9.87787 2.29481 9.68331 1.65094 9.32813V9.38438C1.65094 11.5875 3.24469 13.4203 5.35406 13.8375C4.9574 13.9433 4.54864 13.9968 4.13812 13.9969C3.84683 13.9974 3.5562 13.9691 3.27047 13.9125C3.85687 15.7172 5.56359 17.0297 7.58531 17.0672C5.94252 18.3333 3.9256 19.0175 1.85156 19.0125C1.48341 19.012 1.11561 18.99 0.75 18.9469C2.85993 20.2942 5.31255 21.0068 7.81594 21C16.3172 21 20.9616 14.0766 20.9616 8.07188C20.9616 7.87501 20.9564 7.67813 20.947 7.48595C21.8485 6.84472 22.6283 6.04787 23.25 5.13282V5.13282Z" fill="currentColor"/>
-                          </svg>
-                  </button>
-                  <button class="text-white hover:text-gray-200 w-6">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5 12.0645C22.5 6.26602 17.7984 1.56445 12 1.56445C6.20156 1.56445 1.5 6.26602 1.5 12.0645C1.5 17.3051 5.33906 21.649 10.3594 22.4374V15.1005H7.69266V12.0645H10.3594V9.75117C10.3594 7.12008 11.9273 5.66555 14.3255 5.66555C15.4744 5.66555 16.6763 5.87086 16.6763 5.87086V8.45508H15.3516C14.048 8.45508 13.6402 9.26414 13.6402 10.0957V12.0645H16.552L16.087 15.1005H13.6406V22.4384C18.6609 21.6504 22.5 17.3065 22.5 12.0645Z" fill="currentColor"/>
-                          </svg>
-                  </button>
-                  <button class="text-white hover:text-gray-200 w-6">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 1.5C6.20297 1.5 1.5 6.20297 1.5 12C1.5 17.797 6.20297 22.5 12 22.5C17.797 22.5 22.5 17.8022 22.5 12C22.5 6.19781 17.797 1.5 12 1.5ZM18.6666 6.33984C19.8815 7.76805 20.6046 9.54925 20.7291 11.4202C18.8367 11.3217 16.5727 11.3217 14.7572 11.4914C14.5275 10.9116 14.2922 10.343 14.0353 9.79594C16.1288 8.88844 17.7422 7.69594 18.6666 6.33984ZM12 3.24984C14.0395 3.24634 16.0156 3.95866 17.5837 5.26266C16.6322 6.46547 15.1392 7.51266 13.2797 8.30297C12.2625 6.42188 11.092 4.80328 9.84375 3.52875C10.5482 3.3469 11.2725 3.25322 12 3.24984V3.24984ZM8.04047 4.20703C9.30375 5.46469 10.4906 7.06641 11.5298 8.94141C9.55547 9.54469 7.29141 9.89062 4.875 9.89062C4.41562 9.89062 3.9675 9.87422 3.52453 9.84656C3.83266 8.63935 4.3949 7.5118 5.17367 6.53927C5.95244 5.56673 6.92981 4.77161 8.04047 4.20703V4.20703ZM3.26625 11.5842C3.76406 11.6063 4.26703 11.617 4.77562 11.6119C7.53187 11.5791 10.0969 11.1469 12.3009 10.44C12.5088 10.8722 12.7056 11.3152 12.8916 11.7689C12.6252 11.8272 12.3637 11.9056 12.1092 12.0033C9.09609 13.2689 6.72281 15.3084 5.4375 17.775C4.02813 16.1814 3.25007 14.1274 3.24984 12C3.24984 11.8594 3.25547 11.7211 3.26625 11.5842ZM12 20.7502C10.056 20.7525 8.16724 20.1036 6.63516 18.907C7.8 16.5994 9.87797 14.6883 12.4978 13.5037C12.7439 13.3889 13.072 13.2961 13.4494 13.2141C13.7619 14.0778 14.0408 14.9747 14.2861 15.9047C14.6525 17.3083 14.9223 18.7354 15.0938 20.1759C14.1061 20.5543 13.0576 20.7489 12 20.7502V20.7502ZM16.7306 19.3556C16.5595 17.9001 16.2871 16.4584 15.9155 15.0408C15.728 14.3297 15.5166 13.6406 15.2869 12.968C17.0039 12.8273 19.0603 12.8475 20.6953 12.968C20.5512 14.2606 20.1206 15.5047 19.4347 16.6097C18.7488 17.7148 17.825 18.6529 16.7306 19.3556V19.3556Z" fill="currentColor"/>
-                          </svg>
-                  </button>
-                  <button class="text-white hover:text-gray-200 w-6">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 1.5C6.20156 1.5 1.5 6.32344 1.5 12.2672C1.5 17.025 4.50937 21.0562 8.68125 22.4812C8.73977 22.494 8.79949 22.5002 8.85938 22.5C9.24844 22.5 9.39844 22.2141 9.39844 21.9656C9.39844 21.7078 9.38906 21.0328 9.38437 20.1328C9.03705 20.2142 8.68173 20.2567 8.325 20.2594C6.30469 20.2594 5.84531 18.6891 5.84531 18.6891C5.36719 17.4469 4.67813 17.1141 4.67813 17.1141C3.76406 16.4719 4.67344 16.4531 4.74375 16.4531H4.74844C5.80313 16.5469 6.35625 17.5687 6.35625 17.5687C6.88125 18.4875 7.58437 18.7453 8.2125 18.7453C8.62783 18.737 9.03673 18.6412 9.4125 18.4641C9.50625 17.7703 9.77812 17.2969 10.0781 17.025C7.74844 16.7531 5.29688 15.8297 5.29688 11.7047C5.29688 10.5281 5.70469 9.56719 6.375 8.81719C6.26719 8.54531 5.90625 7.44844 6.47812 5.96719C6.55483 5.94883 6.63368 5.94095 6.7125 5.94375C7.09219 5.94375 7.95 6.08906 9.36563 7.07344C11.0857 6.59218 12.9049 6.59218 14.625 7.07344C16.0406 6.08906 16.8984 5.94375 17.2781 5.94375C17.357 5.94095 17.4358 5.94883 17.5125 5.96719C18.0844 7.44844 17.7234 8.54531 17.6156 8.81719C18.2859 9.57187 18.6937 10.5328 18.6937 11.7047C18.6937 15.8391 16.2375 16.7484 13.8984 17.0156C14.2734 17.3484 14.6109 18.0047 14.6109 19.0078C14.6109 20.4469 14.5969 21.6094 14.5969 21.9609C14.5969 22.2141 14.7422 22.5 15.1312 22.5C15.1942 22.5003 15.2571 22.494 15.3187 22.4812C19.4953 21.0562 22.5 17.0203 22.5 12.2672C22.5 6.32344 17.7984 1.5 12 1.5Z" fill="currentColor"/>
-                          </svg>
-                  </button>
-              </div>
-          </div>
-
-      </div>
-  </div>
-
-</footer>
+<div class="mx-auto container xl:px-20 lg:px-12 sm:px-6 px-4 px-4 py-12">
+    <div class="flex flex-col items-center justify-center">
+        <div>
+            Nftix
+        </div>
+        <div class="flex flex-wrap sm:gap-10 gap-8 items-center justify-center mt-8">
+            <a href="javascript:void(0)" class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">About</a>
+            <a href="javascript:void(0)" class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">Contact us</a>
+            <a href="javascript:void(0)" class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">Terms of Service</a>
+            <a href="javascript:void(0)" class="focus:underline focus:outline-none hover:text-gray-500 text-base cursor-pointer leading-4 text-gray-800 dark:text-gray-400 dark:hover:text-white">Privacy Policy</a>
+        </div>
+        <div class="flex items-center gap-x-8 mt-6">
+            <button aria-label="facebook" class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                <svg class="fill-current text-gray-800 dark:text-white hover:text-gray-500" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M21.5 11.0631C21.5 5.26467 16.7984 0.56311 11 0.56311C5.20156 0.56311 0.5 5.26467 0.5 11.0631C0.5 16.3037 4.33906 20.6476 9.35938 21.4361V14.0992H6.69266V11.0631H9.35938V8.74983C9.35938 6.11873 10.9273 4.6642 13.3255 4.6642C14.4744 4.6642 15.6763 4.86952 15.6763 4.86952V7.45373H14.3516C13.048 7.45373 12.6402 8.2628 12.6402 9.09436V11.0631H15.552L15.087 14.0992H12.6406V21.437C17.6609 20.649 21.5 16.3051 21.5 11.0631Z" fill="currentColor" />
+                </svg>
+            </button>
+            <button aria-label="instagram" class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                <svg class="fill-current text-gray-800 dark:text-white hover:text-gray-500" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.2969 12C14.2969 13.2686 13.2686 14.2969 12 14.2969C10.7314 14.2969 9.70312 13.2686 9.70312 12C9.70312 10.7314 10.7314 9.70312 12 9.70312C13.2686 9.70312 14.2969 10.7314 14.2969 12Z" fill="currentColor" />
+                    <path
+                        d="M17.3716 7.93616C17.2612 7.63696 17.085 7.36615 16.8561 7.14386C16.6339 6.91498 16.3632 6.73883 16.0638 6.62842C15.821 6.53412 15.4563 6.42188 14.7845 6.3913C14.0577 6.35815 13.8398 6.35101 12 6.35101C10.16 6.35101 9.94208 6.35797 9.21552 6.39111C8.5437 6.42188 8.17877 6.53412 7.93616 6.62842C7.63678 6.73883 7.36597 6.91498 7.14386 7.14386C6.91498 7.36615 6.73883 7.63678 6.62823 7.93616C6.53394 8.17896 6.42169 8.54388 6.39111 9.2157C6.35797 9.94226 6.35083 10.1602 6.35083 12.0002C6.35083 13.84 6.35797 14.0579 6.39111 14.7847C6.42169 15.4565 6.53394 15.8212 6.62823 16.064C6.73883 16.3634 6.91479 16.634 7.14368 16.8563C7.36597 17.0852 7.6366 17.2614 7.93597 17.3718C8.17877 17.4662 8.5437 17.5785 9.21552 17.6091C9.94208 17.6422 10.1598 17.6492 11.9998 17.6492C13.84 17.6492 14.0579 17.6422 14.7843 17.6091C15.4561 17.5785 15.821 17.4662 16.0638 17.3718C16.6648 17.14 17.1398 16.665 17.3716 16.064C17.4659 15.8212 17.5781 15.4565 17.6089 14.7847C17.642 14.0579 17.649 13.84 17.649 12.0002C17.649 10.1602 17.642 9.94226 17.6089 9.2157C17.5783 8.54388 17.4661 8.17896 17.3716 7.93616ZM12 15.5383C10.0457 15.5383 8.46149 13.9543 8.46149 12C8.46149 10.0457 10.0457 8.46167 12 8.46167C13.9541 8.46167 15.5383 10.0457 15.5383 12C15.5383 13.9543 13.9541 15.5383 12 15.5383ZM15.6782 9.14868C15.2216 9.14868 14.8513 8.77844 14.8513 8.32178C14.8513 7.86511 15.2216 7.49487 15.6782 7.49487C16.1349 7.49487 16.5051 7.86511 16.5051 8.32178C16.5049 8.77844 16.1349 9.14868 15.6782 9.14868Z"
+                        fill="currentColor"
+                    />
+                    <path
+                        d="M12 0C5.3736 0 0 5.3736 0 12C0 18.6264 5.3736 24 12 24C18.6264 24 24 18.6264 24 12C24 5.3736 18.6264 0 12 0ZM18.8491 14.8409C18.8157 15.5744 18.6991 16.0752 18.5288 16.5135C18.1708 17.4391 17.4391 18.1708 16.5135 18.5288C16.0754 18.6991 15.5744 18.8156 14.8411 18.8491C14.1063 18.8826 13.8715 18.8906 12.0002 18.8906C10.1287 18.8906 9.8941 18.8826 9.15912 18.8491C8.42578 18.8156 7.9248 18.6991 7.48663 18.5288C7.02667 18.3558 6.61029 18.0846 6.26605 17.7339C5.91559 17.3899 5.64441 16.9733 5.47137 16.5135C5.30109 16.0754 5.18445 15.5744 5.15112 14.8411C5.11725 14.1061 5.10938 13.8713 5.10938 12C5.10938 10.1287 5.11725 9.89392 5.15094 9.15912C5.18427 8.4256 5.30072 7.9248 5.47101 7.48645C5.64404 7.02667 5.91541 6.61011 6.26605 6.26605C6.61011 5.91541 7.02667 5.64423 7.48645 5.47119C7.9248 5.3009 8.4256 5.18445 9.15912 5.15094C9.89392 5.11743 10.1287 5.10938 12 5.10938C13.8713 5.10938 14.1061 5.11743 14.8409 5.15112C15.5744 5.18445 16.0752 5.3009 16.5135 5.47101C16.9733 5.64404 17.3899 5.91541 17.7341 6.26605C18.0846 6.61029 18.356 7.02667 18.5288 7.48645C18.6993 7.9248 18.8157 8.4256 18.8492 9.15912C18.8828 9.89392 18.8906 10.1287 18.8906 12C18.8906 13.8713 18.8828 14.1061 18.8491 14.8409Z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </button>
+            <button aria-label="pinterest" class="focus:ring-2 focus:ring-offset-2 focus:ring-2 focus:ring-gray-800 focus:outline-none rounded-full">
+                <svg class="fill-current text-gray-800 dark:text-white hover:text-gray-500" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M12.0027 0.554382C5.37441 0.554382 0 5.94525 0 12.5938C0 17.5224 2.9578 21.7577 7.18553 23.6228C7.15338 22.7843 7.18017 21.7739 7.39451 20.8602C7.62492 19.882 8.93771 14.2976 8.93771 14.2976C8.93771 14.2976 8.55191 13.529 8.55191 12.3949C8.55191 10.6105 9.58071 9.27759 10.8667 9.27759C11.9598 9.27759 12.4849 10.0999 12.4849 11.0835C12.4849 12.1853 11.783 13.83 11.424 15.3564C11.1239 16.6356 12.0616 17.6729 13.3208 17.6729C15.5928 17.6729 17.1253 14.7437 17.1253 11.2716C17.1253 8.63262 15.3516 6.66009 12.1313 6.66009C8.49297 6.66009 6.22103 9.38508 6.22103 12.4272C6.22103 13.4753 6.53181 14.217 7.01407 14.7867C7.23376 15.0501 7.26591 15.1576 7.18553 15.4585C7.12659 15.6789 6.99799 16.211 6.93905 16.426C6.85867 16.7324 6.61219 16.8398 6.33891 16.727C4.66176 16.039 3.87944 14.2008 3.87944 12.1262C3.87944 8.70786 6.75686 4.60694 12.4581 4.60694C17.0395 4.60694 20.0563 7.9339 20.0563 11.5027C20.0563 16.2271 17.436 19.753 13.578 19.753C12.2813 19.753 11.065 19.0489 10.647 18.2534C10.647 18.2534 9.95043 21.0268 9.8004 21.5642C9.54856 22.4941 9.05023 23.4185 8.59478 24.1441C9.6996 24.471 10.8454 24.6376 11.9973 24.6386C18.6256 24.6386 24 19.2477 24 12.5992C24 5.95062 18.6309 0.554382 12.0027 0.554382Z"
+                        fill="currentColor"
+                    />
+                </svg>
+            </button>
+        </div>
+        <div class="flex items-center mt-6">
+            <p class="text-base leading-4 text-gray-800 dark:text-gray-400">2022 <span class="font-semibold">Nftix</span></p>
+            <div class="border-l border-gray-800 pl-2 ml-2">
+                <p class="text-base leading-4 text-gray-800 dark:text-gray-400">All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</div>
