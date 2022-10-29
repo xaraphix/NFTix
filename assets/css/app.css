@@ -1,0 +1,171 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+
+@font-face {
+  font-family: 'Abel';
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('../fonts/Abel/Abel.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 200 300 400 500 600 700 800 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('../fonts/Inter/Inter.ttf') format('truetype');
+}
+
+
+@layer base {
+  :root {
+
+    
+    --color-primary-50:  250, 248, 255;
+    --color-primary-100: 211, 196, 250;
+    --color-primary-200: 181, 157, 248;
+    --color-primary-300: 149, 115, 246;
+    --color-primary-400: 120, 82, 244;
+    --color-primary-500: 88, 49, 241;
+    --color-primary-600: 74, 45, 234;
+    --color-primary-700: 50, 37, 226;
+    --color-primary-800: 0, 30, 220;
+    --color-primary-900: 0, 14, 213;    
+  
+    --color-secondary-50:  228, 228, 239;   
+    --color-secondary-100: 189, 188, 215;
+    --color-secondary-200: 146, 145, 187;
+    --color-secondary-300: 106, 103, 161;
+    --color-secondary-400: 78, 73, 143;
+    --color-secondary-500: 51, 43, 124;
+    --color-secondary-600: 46, 36, 116;
+    --color-secondary-700: 39, 28, 106;
+    --color-secondary-800: 31, 18, 94;
+    --color-secondary-900: 18, 0, 73;
+    --color-background: 255, 255, 255;
+    --color-background-disabled: 255, 255, 255;
+    --color-background-muted: 255, 255, 255;
+    --color-surface: 255, 255, 255;
+    --color-surface-inverted: 40, 40, 40;
+    --color-surface-100: 244, 249, 255;
+    --color-surface-200: 255, 255, 255;
+    --color-on-surface-100: 47, 99, 255;
+    --color-on-surface-200: 9, 3, 119;
+    --color-surface-muted: 255, 255, 255;
+    --color-surface-disabled: 255, 255, 255;
+
+    --color-surface-light: 255, 255, 255;
+    --color-surface-dark: 0, 0, 0;
+    --color-on-surface-light: 18, 0, 73;
+    --color-on-surface-light-accent: 0, 14, 213;
+  }
+
+  .theme-light {
+
+    
+
+    --color-primary-50:  250, 248, 255;
+    --color-primary-100: 211, 196, 250;
+    --color-primary-200: 181, 157, 248;
+    --color-primary-300: 149, 115, 246;
+    --color-primary-400: 120, 82, 244;
+    --color-primary-500: 88, 49, 241;
+    --color-primary-600: 74, 45, 234;
+    --color-primary-700: 50, 37, 226;
+    --color-primary-800: 0, 30, 220;
+    --color-primary-900: 0, 14, 213;    
+  
+    --color-secondary-50:  228, 228, 239;   
+    --color-secondary-100: 189, 188, 215;
+    --color-secondary-200: 146, 145, 187;
+    --color-secondary-300: 106, 103, 161;
+    --color-secondary-400: 78, 73, 143;
+    --color-secondary-500: 51, 43, 124;
+    --color-secondary-600: 46, 36, 116;
+    --color-secondary-700: 39, 28, 106;
+    --color-secondary-800: 31, 18, 94;
+    --color-secondary-900: 18, 0, 73;
+    --color-background: 255, 255, 255;
+    --color-background-disabled: 255, 255, 255;
+    --color-background-muted: 240, 240, 240;
+    --color-surface: 255, 255, 255;
+    --color-surface-inverted: 40, 40, 40;
+    --color-surface-100: 244, 249, 255;
+    --color-surface-200: 255, 255, 255;
+    --color-on-surface-100: 47, 99, 255;
+    --color-on-surface-200: 9, 3, 119;
+    --color-on-surface-300: 184, 184, 184;
+    --color-on-surface-400: 149, 149, 149;
+    --color-on-surface-500: 107, 107, 107;
+    --color-on-surface-600: 80, 80, 80;
+    --color-on-surface-700: 39, 39, 39;
+    --color-on-surface-800: 11, 11, 11;
+    --color-surface-muted: 220, 234, 255;
+    --color-surface-disabled: 255, 255, 255;
+  }
+
+  .theme-dark{
+    
+
+    --color-primary-50:  249, 251, 254;
+    --color-primary-100: 240, 246, 252;
+    --color-primary-200: 230, 240, 250;
+    --color-primary-300: 219, 234, 247;
+    --color-primary-400: 212, 230, 246;
+    --color-primary-500: 204, 225, 244;
+    --color-primary-600: 199, 221, 243;
+    --color-primary-700: 192, 217, 241;
+    --color-primary-800: 185, 213, 239;
+    --color-primary-900: 173, 205, 236;     
+  
+    --color-secondary-50:  251, 251, 251;   
+    --color-secondary-100: 244, 244, 246;
+    --color-secondary-200: 237, 237, 240;
+    --color-secondary-300: 230, 229, 234;
+    --color-secondary-400: 224, 224, 230;
+    --color-secondary-500: 219, 218, 225;
+    --color-secondary-600: 215, 214, 221;
+    --color-secondary-700: 210, 208, 217;
+    --color-secondary-800: 205, 203, 213;
+    --color-secondary-900: 196, 194, 205;
+    --color-background: 7, 7, 20;
+    --color-background-disabled: 255, 255, 255;
+    --color-background-muted: 30, 30, 40;
+    --color-surface: 5, 5, 15;
+    --color-surface-inverted: 255, 255, 255;
+    --color-background: 10, 10, 30;
+    --color-background: 10, 10, 30;
+    --color-on-surface-800: 255, 255, 255;
+    --color-on-surface-700: 234, 234, 234; 
+    --color-on-surface-600: 241, 240, 240;
+    --color-on-surface-500: 218, 218, 218;
+    --color-on-surface-400: 216, 216, 216;
+    --color-on-surface-300: 187, 187, 187;
+    --color-on-surface-200: 168, 168, 168;
+    --color-on-surface-100: 135, 132, 132;
+    --color-surface-muted: 33, 21, 60;
+    --color-surface-disabled: 255, 255, 255;
+  }
+
+}
+
+/* Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(var(--color-background-muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(var(--color-on-surface-600));
+  border-radius: 10px;
+}
